@@ -4,6 +4,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 /* overpass-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -38,4 +43,22 @@ body {
   display: flex;
   flex-flow: column nowrap;
   gap: 1rem;
+}
+.card__logo {
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  background: #262e38;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__text {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+.card__heading {
+  font-size: 1.5rem;
+  color: white;
 }
