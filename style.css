@@ -31,22 +31,26 @@ body {
   background: #131518;
   color: #969fad;
   font-family: "Overpass", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .wrapper {
   width: min(100% - 3rem, 25.75rem);
   margin-inline: auto;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 .card {
   background: radial-gradient(#232a34, #181e27);
-  border-radius: 30px;
+  border-radius: 15px;
   display: flex;
   flex-flow: column nowrap;
   gap: 1rem;
 }
 .card__logo {
-  width: 51px;
-  height: 51px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: #262e38;
   display: flex;
@@ -61,4 +65,43 @@ body {
 .card__heading {
   font-size: 1.5rem;
   color: white;
+  font-weight: 700;
+}
+.card__desc {
+  font-size: 0.875rem;
+}
+.card__button-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.rating-button {
+  text-decoration: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #262e38;
+  color: #969fad;
+}
+.rating-button:hover,
+.rating-focus:focus {
+  background: #fc7614;
+  color: #262e38;
+}
+.button {
+  display: block;
+  background: #fc7614;
+  border-radius: 22.5px;
+  display: flex;
+  justify-content: center;
+  padding-block: 0.84375rem;
+  text-decoration: none;
+  color: #131518;
+  text-transform: uppercase;
+  letter-spacing: 1.87px;
+  font-size: 14px;
 }
