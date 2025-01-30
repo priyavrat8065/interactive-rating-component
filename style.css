@@ -36,6 +36,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+.hidden {
+  display: none !important;
+}
 .wrapper {
   width: min(100% - 3rem, 25.75rem);
   margin-inline: auto;
@@ -57,10 +60,18 @@ body {
   align-items: center;
   justify-content: center;
 }
+.card__logo--big {
+  width: 162px;
+  height: 108px;
+  margin-inline: auto;
+}
 .card__text {
   display: flex;
   flex-flow: column nowrap;
   gap: 1rem;
+}
+.card__text--center {
+  text-align: center;
 }
 .card__heading {
   font-size: 1.5rem;
@@ -76,9 +87,10 @@ body {
 }
 
 .rating-button {
-  text-decoration: none;
+  /*  text-decoration: none;*/
   width: 42px;
   height: 42px;
+  border: none;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -92,7 +104,10 @@ body {
   background: #fc7614;
   color: #262e38;
 }
+
 .button {
+  width: 100%;
+  border: none;
   display: block;
   background: #fc7614;
   border-radius: 22.5px;
@@ -104,4 +119,14 @@ body {
   text-transform: uppercase;
   letter-spacing: 1.87px;
   font-size: 14px;
+}
+.card__thank-you-button-container {
+  width: 168px;
+  margin-inline: auto;
+}
+.button--medium {
+  letter-spacing: 0;
+  text-transform: none;
+  color: #fc7614;
+  background: #262e38;
 }
