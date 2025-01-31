@@ -75,15 +75,26 @@ body {
 }
 .card__heading {
   font-size: 1.5rem;
+  font-size: clamp(
+    1.5rem,
+    1.2614503816793894rem + 1.0178117048346056vw,
+    1.75rem
+  );
   color: white;
   font-weight: 700;
 }
 .card__desc {
   font-size: 0.875rem;
+  font-size: clamp(
+    0.875rem,
+    0.8153625954198473rem + 0.2544529262086514vw,
+    0.9375rem
+  );
+  line-height: 22px;
 }
 .card__button-container {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
 }
 
 .rating-button {
@@ -120,8 +131,13 @@ body {
   letter-spacing: 1.87px;
   font-size: 14px;
 }
+.button:hover,
+.button:focus {
+  background: white;
+  color: #262e38;
+}
 .card__thank-you-button-container {
-  width: 168px;
+  width: clamp(10.5rem, 9.009064885496183rem + 6.361323155216285vw, 12.0625rem);
   margin-inline: auto;
 }
 .button--medium {
@@ -129,4 +145,29 @@ body {
   text-transform: none;
   color: #fc7614;
   background: #262e38;
+  cursor: inherit;
+}
+.button--medium:hover,
+.button--medium:focus {
+  color: #fc7614;
+  background: #262e38;
+}
+@media screen and (min-width: 768px) {
+  .wrapper {
+    /*    width: min(100% - 4.4375rem, 25.75rem);*/
+    padding: 2.2rem;
+  }
+  .card__desc {
+    line-height: 24px;
+  }
+  .rating-button {
+    width: 51px;
+    height: 51px;
+    font-size: 16px;
+  }
+
+  .button {
+    font-size: 0.9375rem;
+    letter-spacing: 2px;
+  }
 }
