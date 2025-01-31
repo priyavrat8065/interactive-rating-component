@@ -59,6 +59,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (min-width: 768px) {
+    width: 48px;
+    height: 48px;
+  }
 }
 .card__logo--big {
   width: 162px;
@@ -94,11 +98,15 @@ body {
 }
 .card__button-container {
   display: flex;
-  justify-content: space-between;
+  gap: 1rem;
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+  }
 }
 
 .rating-button {
   /*  text-decoration: none;*/
+  cursor: pointer;
   width: 42px;
   height: 42px;
   border: none;
@@ -117,6 +125,7 @@ body {
 }
 
 .button {
+  cursor: pointer;
   width: 100%;
   border: none;
   display: block;
